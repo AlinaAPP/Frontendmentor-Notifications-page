@@ -1,0 +1,106 @@
+@use "../utilities" as u;
+
+.msg {
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__btn {
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    background-color: transparent;
+    padding: 1em;
+    font-family: var(--font-family);
+    color: var(--clr-dark-grayish-blue);
+
+    img {
+      width: 11%;
+      margin-right: 0.5rem;
+    }
+    .text {
+      align-self: center;
+      justify-self: center;
+      flex-grow: 1;
+      p {
+        text-align: left;
+        color: inherit;
+        font-family: inherit;
+        font-size: u.pxToRem(14px);
+
+        span.username {
+          color: var(--clr-dark-blue);
+          font-weight: 800;
+          margin-right: 0.3rem;
+
+          &:hover {
+            color: var(--clr-blue);
+            cursor: pointer;
+          }
+        }
+        span.chess {
+          color: var(--clr-blue);
+          font-weight: 800;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        span.game-strategies {
+          font-weight: 800;
+
+          &:hover {
+            cursor: pointer;
+            color: var(--clr-blue);
+          }
+        }
+      }
+      span.time {
+        display: block;
+        text-align: start;
+        color: var(--clr-grayish-blue);
+        margin-top: 0.3rem;
+      }
+    }
+
+    img.another-user-img {
+      margin-right: 0;
+      margin-left: 1rem;
+    }
+
+    &.unread {
+      border-radius: u.pxToRem(10px);
+      background-color: var(--clr-light-grayish-blue);
+
+      & > div.text > p::after {
+        content: "";
+        display: inline-block;
+        border-radius: 100%;
+        background-color: var(--clr-red);
+        width: 0.4rem;
+        aspect-ratio: 1;
+        margin-left: 0.2rem;
+        transform: translateY(u.pxToRem(-2px));
+      }
+    }
+  }
+
+  &__body {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__btn[aria-expanded="true"] + &__body {
+    height: max-content;
+    padding: 1em;
+    margin: 0 0.8rem 0 3.5rem;
+    border: 1px solid var(--clr-light-grayish-blue2);
+    border-radius: u.pxToRem(5px);
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--clr-light-grayish-blue2);
+    }
+  }
+}

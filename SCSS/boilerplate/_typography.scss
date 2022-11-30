@@ -1,0 +1,21 @@
+@use "../utilities" as u;
+
+body {
+  font-family: var(--font-family);
+  font-size: u.pxToRem(16px);
+  background-color: var(--clr-light-grayish-blue);
+  color: var(--clr-dark-grayish-blue);
+}
+
+.container {
+  background-color: var(--clr-white);
+  padding-inline: u.pxToRem(20px);
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include u.breakpoint-up(medium) {
+    margin-inline: auto;
+    width: min(100% - u.pxToRem(40px), 650px);
+  }
+}

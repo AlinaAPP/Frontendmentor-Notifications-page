@@ -1,0 +1,8 @@
+@use "../utilities" as u;
+
+.footer {
+  flex-direction: column;
+  margin-top: 2rem;
+  font-size: u.pxToRem(13px);
+  text-align: center;
+}

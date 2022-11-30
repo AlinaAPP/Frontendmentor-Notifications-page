@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header flex">
+        <div class="header__left">
+          Notifications <span id="notification"></span>
+        </div>
+        <button class="header__right">Mark all as read</button>
+      </header>
+      <main>
+        <section class="msg">
+          <div class="msg__item">
+            <button class="msg__btn unread" aria-expanded="false">
+              <img
+                src="./assets/images/avatar-mark-webber.webp"
+                alt="Mark Webber photo"
+              />
+              <div class="text">
+                <p>
+                  <span class="username">Mark Webber</span> reacted to your
+                  recent post
+                  <span class="game-strategies"
+                    >My first tournament today!</span
+                  >
+                </p>
+                <span class="time">1m ago</span>
+              </div>
+            </button>
+          </div>
+          <div class="msg__item">
+            <button class="msg__btn unread" aria-expanded="false">
+              <img
+                src="./assets/images/avatar-angela-gray.webp"
+                alt="Angela Gray photo"
+              />
+              <div class="text">
+                <p><span class="username">Angela Gray</span> followed you</p>
+                <span class="time">5m ago</span>
+              </div>
+            </button>
+          </div>
+          <div class="msg__item">
+            <button class="msg__btn unread" aria-expanded="false">
+              <img
+                src="./assets/images/avatar-jacob-thompson.webp"
+                alt="Jacob Thompson photo"
+              />
+              <div class="text">
+                <p>
+                  <span class="username">Jacob Thompson</span> has joined your
+                  group <span class="chess">Chess Club</span>
+                </p>
+                <span class="time">1 day ago</span>
+              </div>
+            </button>
+          </div>
+          <div class="msg__item">
+            <button class="msg__btn unread" aria-expanded="false">
+              <img
+                src="./assets/images/avatar-rizky-hasanuddin.webp"
+                alt="Rizky Hasanuddin photo"
+              />
+              <div class="text">
+                <p>
+                  <span class="username">Rizky Hasanuddin</span> sent you a
+                  private message
+                </p>
+                <span class="time">5 days ago</span>
+              </div>
+            </button>
+            <div class="msg__body">
+              <p>
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </p>
+            </div>
+          </div>
+          <div class="msg__item">
+            <button class="msg__btn unread" aria-expanded="false">
+              <img
+                src="./assets/images/avatar-kimberly-smith.webp"
+                alt="Kimberly Smith photo"
+              />
+              <div class="text">
+                <p>
+                  <span class="username">Kimberly Smith</span> commented on your
+                  picture
+                </p>
+                <span class="time">1 week ago</span>
+              </div>
+              <img
+                class="another-user-img"
+                src="./assets/images/image-chess.webp"
+                alt="User photo"
+              />
+            </button>
+          </div>
+          <div class="msg__item">
+            <button class="msg__btn unread" aria-expanded="false">
+              <img
+                src="./assets/images/avatar-nathan-peterson.webp"
+                alt="Nathan Peterson photo"
+              />
+              <div class="text">
+                <p>
+                  <span class="username">Nathan Peterson</span> reacted to your
+                  recent post
+                  <span class="game-strategies"
+                    >5 end-game strategies to increase your win rate</span
+                  >
+                </p>
+                <span class="time">2 weeks ago</span>
+              </div>
+            </button>
+          </div>
+          <div class="msg__item">
+            <button class="msg__btn unread" aria-expanded="false">
+              <img
+                src="./assets/images/avatar-anna-kim.webp"
+                alt="Anna Kim photo"
+              />
+              <div class="text">
+                <p>
+                  <span class="username">Anna Kim</span> left the group
+                  <span class="chess">Chess Club</span>
+                </p>
+                <span class="time">2 weeks ago</span>
+              </div>
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Alina</a>.
+      </div>
+    </footer>
+
+    <script src="./script/java.js"></script>
+  </body>
+</html>
